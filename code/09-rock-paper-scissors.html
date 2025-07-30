@@ -11,18 +11,29 @@
     
     <button onclick="playGame('scissors');">Scissors</button>
     
+    <p class="js-result"></p>
+    
+    <p class="js-moves"></p>
+
+    <p class="js-score"></p>
+    
     <button onclick="
         score.wins = 0,
         score.losses = 0,
         score.ties = 0
         localStorage.removeItem('score');
+        updateScoreElement();
     ">Reset Score</button>
+
     <script>
       let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0,
         ties: 0
       }
+
+      updateScoreElement();
+
 /*
       if (!score) {
         score = {
@@ -39,7 +50,7 @@
         
         if (playerMove === 'scissors') {
           if (computerMove === 'rock') {
-            result = 'You lose';
+          result = 'You lose';
           } else if (computerMove === 'paper') {
           result = 'You win'
           } else if (computerMove === 'scissors'){
@@ -47,11 +58,11 @@
           }
         } else if (playerMove === 'paper') {
             if (computerMove === 'rock') {
-              result = 'You win';
+            result = 'You win';
             } else if (computerMove === 'paper') {
             result = 'Tie'
             } else if (computerMove === 'scissors'){
-            result = 'You lose.'
+            result = 'You lose'
             }
         } else if (playerMove === 'rock') {
             if (computerMove === 'rock') {
@@ -72,10 +83,21 @@
 
         localStorage.setItem('score',JSON.stringify(score));
 
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.
-wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}
-`);
+        updateScoreElement();
+        
+        document.querySelector('.js-result')
+        .innerHTML = `${result}`
+
+        document.querySelector('.js-moves')
+        .innerHTML = `You chose ${playerMove} - Computer chose ${computerMove}`
+}
+
+      function updateScoreElement() {
+        document.querySelector('.js-score')
+        .innerHTML =  `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
+  
       }
+
 
       function pickComputerMove() {
         const randomNumber = Math.random();
