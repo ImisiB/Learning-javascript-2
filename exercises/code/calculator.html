@@ -6,108 +6,100 @@
     <title>Calculator</title>
   </head>
   <body>
-    <h1>Calculator</h1>
+    <p class="js-result result">0</p>
+    <p>
     
-  <p>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '1';
-      console.log(calculation);
+      answer();
     ">1</button>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '2';
-      console.log(calculation);
+      answer();
     ">2</button>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '3';
-      console.log(calculation);
+      answer();
     ">3</button>
     
-    <button onclick="
+    <button class="valueButton" onclick="
       calculation += ' + ';
-      console.log(calculation);
+      answer();
     ">+</button>
   </p>
 
   <p>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '4';
-      console.log(calculation);
+      answer();
     ">4</button>
   
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '5';
-      console.log(calculation);
+      answer();
     ">5</button>
     
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '6';
-      console.log(calculation);
+      answer();
     ">6</button>
     
-    <button onclick="
+    <button class="valueButton" onclick="
       calculation += ' - ';
-      console.log(calculation);
+      answer();
     ">-</button>
   </p>
 
 
   <p>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '7';
-      console.log(calculation);
+      answer();
     ">7</button>
   
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '8';
-      console.log(calculation);
+      answer();
     ">8</button>
     
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '9';
-      console.log(calculation);
+      answer();
     ">9</button>
     
-    <button onclick="
+    <button class="valueButton" onclick="
       calculation += ' * ';
-      console.log(calculation);
-    ">-</button>
+      answer();
+    ">*</button>
   </p>
 
   
   <p>
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '0';
-      console.log(calculation);
+      answer();
     ">0</button>
   
-    <button onclick="
+    <button class="numberButton" onclick="
       calculation += '.';
-      console.log(calculation);
+      answer();
     ">.</button>
     
-    <button onclick="
-      eval(calculation)
-      console.log(calculation);
+    <button class="numberButton" onclick="
+      eval(calculation);
       calculation = eval(calculation);
-    ">=</button>
+      answer();
+      " class="js-calculate">=</button>
     
-    <button onclick="
+    <button class="valueButton" onclick="
       calculation += ' / ';
-      console.log(calculation);
+      answer();
     ">/</button>
   </p>
-
     
-    <button onclick="
-      calculation = '';
-      console.log(calculation);
+    <button class="clearButton" onclick="
+      calculation = '0';
+      answer();
   ">clear</button>
-
-
-
-
-
-
-
   </body>
 </html>
