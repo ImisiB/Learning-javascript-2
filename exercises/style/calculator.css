@@ -3,7 +3,9 @@ body{
   font-family: Arial;
 }
 .result{
-  color: white;
+  color: black;
+  max-width: 280px;
+  background-color: white;
   font-size: 30px;
   border: none;
   border-radius: 5px;
