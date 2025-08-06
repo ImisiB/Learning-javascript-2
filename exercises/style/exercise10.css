@@ -1,0 +1,47 @@
+body{
+  padding: none;
+  margin: none;
+  font-family: Arial;
+}
+
+.button{
+  cursor: pointer;
+  background-color: rgb(255, 216, 20);
+  padding: 13px 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+.request{
+  background-color: black;
+  padding: 13px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.schedule{
+  background-color: rgb(230, 230, 230);
+  padding: 13px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.is-toggled{
+  background-color: rgb(230, 230, 230);
+  padding: 13px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.not-toggled{
+  background-color: black;
+  padding: 13px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9 - Document Object Model(DOM)</title>
+    <script src="../javascript/exercise9.js"></script>
+    <link rel="stylesheet" href="../style/exercise9.css">
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-button">9b</button>
+    <button class="js-heads" onclick="
+      document.querySelector('p').innerHTML = 'You chose: heads' 
+    ">heads</button>
+    <button class="js-tails" onclick="
+      document.querySelector('p').innerHTML = 'You chose: tails' 
+    ">tails</button>
+    <p></p>
+
+    <input class=".js-input" type="text" placeholder="Enter your name">
+    <button onclick="
+      const inputElement = document.querySelector('.js-input')
+      
+      document.querySelector('.js-p')
+        .innerHTML = `Your name: ${inputElement.value}`
+    ">Submit</button>
+    
+    <p class="js-p"></p>
+
+    <script>
+      console.log(document.querySelector('button'));
+      document.querySelector('button')
+        .innerHTML = '9b done!';
+    </script>
+  </body>
+</html>

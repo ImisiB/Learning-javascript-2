@@ -1,3 +1,8 @@
+body{
+  padding: none;
+  margin: none;
+  font-family: Arial;
+}
 .addToCart{
   background-color: yellow;
 }
