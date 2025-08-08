@@ -30,3 +30,7 @@ isSameProduct({name: 'shoe', price: 500}, {name: 'bag', price: 500})
 
 
 console.log('Good Morning'.toLowerCase());
+
+
+const repeatWord = 'test';
+console.log(repeatWord.repeat(2));

@@ -13,22 +13,26 @@
 
     <button class="js-button">Test</button>
 
-    <button class="is-toggled js-toggleButton" onclick="
-      toggling();
+    <button class="not-toggled js-toggleButton" onclick="
+      toggleButton('.js-toggleButton')
     ">Gaming</button>
-    <button class="is-toggled js-toggleButton2" onclick="
-      toggling();
+    <button class="not-toggled js-toggleButton2" onclick="
+      toggleButton('.js-toggleButton2')
     ">Music</button>
-    <button class="is-toggled js-toggleButton3" onclick="
-      toggling();
-  ">Tech</button>
+    <button class="not-toggled js-toggleButton3" onclick="
+      toggleButton('.js-toggleButton3')"
+    >Tech</button>
+    <p></p>
+    <input class="js-valueButton valueButton">
+    <button onclick="
+      calculateButton();
+    " class="calculateButton">Calculate</button>
+    <p class="js-valueAnswer correct"></p>
 
 
     <script>
       const test = document.querySelector('.js-button')
       console.log(test.classList.contains('.js-button'));
-
-
       </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-const todoList = [];
+let todoList = [];
 
-renderTodoList();
+// renderTodoList();
 
 function renderTodoList() {
 
@@ -9,8 +9,9 @@ function renderTodoList() {
   for (let i =0; i < todoList.length; i++) {
     const todo = todoList[i];
     const html = `<p>${todo}</p>`;
-    todoList += html;
+    todoListHTML += html;
   }
+
   console.log(todoListHTML);
 
   document.querySelector('.js-todo-list')
