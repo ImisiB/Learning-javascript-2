@@ -35,3 +35,7 @@ body{
   font-size: 15px;
   cursor: pointer;
 }
+
+.confirmation{
+  color: white;
+}

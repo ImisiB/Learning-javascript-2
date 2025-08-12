@@ -1,8 +1,10 @@
-alert(`Shortcuts for button;
-Rock: r,
-Paper: p,
-Scissors: s
-`)
+// alert(`Shortcuts for button;
+// Rock: r,
+// Paper: p,
+// Scissors: s
+// Auto play: a
+// Reset score: backspace
+// `)
 
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
@@ -57,8 +59,11 @@ document.querySelector('.js-rock-button')
     playGame('scissors');
   })
 
+  const resetScore = () => {
   document.querySelector('.js-reset-score-button') 
   .addEventListener('click', () => {
+    document.querySelector('.js-confirmation') 
+      .innerHTML = `Are you sure you want to reset the score`;
     score.wins = 0,
     score.losses = 0,
     score.ties = 0
@@ -66,10 +71,19 @@ document.querySelector('.js-rock-button')
     updateScoreElement();
     removeScoreElement();
   })
+}
+
 
   document.querySelector('.js-auto-play-button') 
   .addEventListener('click', () => {
     autoPlay();
+    if(isAutoPlaying === false) {
+      document.querySelector('.js-auto-play-button')
+      .innerText = 'Auto Play'
+    } else if(isAutoPlaying === true){
+      document.querySelector('.js-auto-play-button')
+      .innerText = 'Stop Play'
+    }
   })
   
 
@@ -80,9 +94,12 @@ document.querySelector('.js-rock-button')
       playGame('paper');
     } else if(event.key === 's') {
       playGame('scissors');
+    } else if(event.key === 'a') {
+      autoPlay();
+    } else if(event.key === 'Backspace') {
+      resetScore();
     }
   })
-
 function playGame(playerMove) {    
   const computerMove = pickComputerMove();
 
